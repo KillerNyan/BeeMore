@@ -1,0 +1,7 @@
+{
+  "name": "BeeMore",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
