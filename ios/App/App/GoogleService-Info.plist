@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDH9T_LMWy-eSXvB_PjBL5tWcyjy6KaIbI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>160075122538</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>gt.asms.beemoree</string>
+	<key>PROJECT_ID</key>
+	<string>bee-more</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bee-more.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:160075122538:ios:5f16001a4b5a8b2607c713</string>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "160075122538",
+    "project_id": "bee-more",
+    "storage_bucket": "bee-more.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160075122538:android:caf81de75e7004c007c713",
+        "android_client_info": {
+          "package_name": "gt.asms.beemoree"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpfqae3e7jS2YpS2fERdbSi33TO6ItwUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

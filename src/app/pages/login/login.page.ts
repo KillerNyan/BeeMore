@@ -64,12 +64,13 @@ export class LoginPage implements OnInit {
         this.datosUsuario = await this.storage.get('datos');
         if (this.datosUsuario.tipo_usuario == '1' || this.datosUsuario.tipo_usuario == '2') {
           this.navCtrl.navigateRoot('/grados');
+          await this.initializeApp(this.datosUsuario.codigo, 'grados');
         } else if (this.datosUsuario.tipo_usuario == '3') {
           this.navCtrl.navigateRoot('/tab');
+          await this.initializeApp(this.datosUsuario.codigo, 'tab');
         } else {
           this.navCtrl.navigateRoot('/tab-hijos');
         }
-        await this.initializeApp(this.datosUsuario.codigo);
       }
       await this.loadingController.dismiss();
       this.datosUsuario = await this.storage.get('datos');
@@ -89,7 +90,7 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async initializeApp(codigo: any) {
+  async initializeApp(codigo: any, redirect: any) {
     const permission = await PushNotifications.requestPermissions();
     if (permission.receive === 'granted') {
       PushNotifications.register();
@@ -108,11 +109,13 @@ export class LoginPage implements OnInit {
       });
       PushNotifications.addListener('pushNotificationReceived', (notification: PushNotificationSchema) => {
         console.log('Push Received: ', notification);
-        this.navCtrl.navigateForward('tab');
+        this.navCtrl.navigateRoot(redirect);
+        console.log(redirect);
       });
       PushNotifications.addListener('pushNotificationActionPerformed', (action: ActionPerformed) => {
         console.log('Push Received: ', action);
-        this.navCtrl.navigateForward('tab');
+        this.navCtrl.navigateRoot(redirect);
+        console.log(redirect);
       });
     }
   }

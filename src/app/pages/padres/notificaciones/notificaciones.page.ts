@@ -30,7 +30,7 @@ export class NotificacionesPage implements OnInit {
 
   async ngOnInit() {
     this.datosUsuario = await this.strg.get('datos');
-    this.codigo = this.datosUsuario.tipo_codigo;
+    this.codigo = this.datosUsuario.codigo;
     this.tipoUsu = this.datosUsuario.tipo_usuario;
     (await this.asmsSrvc.getNotificaciones(this.codigo, this.tipo, this.alumno, this.page)).subscribe((notificaciones: any) => {
       if (Object.prototype.toString.call(notificaciones) === '[object Array]') {
@@ -46,6 +46,7 @@ export class NotificacionesPage implements OnInit {
   }
 
   recarga(event: any) {
+    this.page = 0;
     setTimeout(async () => {
       (await this.asmsSrvc.getNotificaciones(this.codigo, this.tipo, this.alumno, this.page)).subscribe((notificaciones: any) => {
         if (Object.prototype.toString.call(notificaciones) === '[object Array]') {
@@ -58,6 +59,11 @@ export class NotificacionesPage implements OnInit {
   }
 
   async verNotificaciones(pos: any) {
+    const tipo = this.notificaciones[pos].type;
+    const numeroNot = this.notificaciones[pos].item_id;
+    (await this.asmsSrvc.cambioStatusNotificacion(this.codigo, tipo, numeroNot)).subscribe((resp: any) => {
+      console.log(resp);
+    });
     if (this.notificaciones[pos].categoria == "Circulares") {
       const codigo = this.notificaciones[pos].item_id;
       const pagina = await this.modalCtrl.create({

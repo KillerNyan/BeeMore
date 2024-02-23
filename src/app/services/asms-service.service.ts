@@ -149,6 +149,10 @@ export class AsmsServiceService {
     return this.http.get<T>(`${asmsURL}API_pushup_notification.php?request=list&user_id=${usu}&type=${tipo}&alumno=${alumno}&page=${page}`);
   }
 
+  async cambioStatusNotificacion<T>(usu: any, tipo: any, codigoNot: any) {
+    return this.http.get<T>(`${asmsURL}API_pushup_notification.php?request=reset_especifica&user_id=${usu}&type=${tipo}&type_id=${codigoNot}`);
+  }
+
   async getPhotoAlbumPadre<T>(tipoUsu: any, codUsu: any, page: any) {
     return this.http.get<T>(`${asmsURL}API_photos.php?request=albumes&tipo=${tipoUsu}&codigo=${codUsu}&page=${page}`);
   }
