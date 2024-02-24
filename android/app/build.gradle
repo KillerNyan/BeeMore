@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "gt.asms.beemoree"
+    namespace "com.farasi.beemore"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "gt.asms.beemoree"
+        applicationId "com.farasi.beemore"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
