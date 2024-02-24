@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'gt.asms.beemoree',
+  appId: 'com.farasi.beemore',
   appName: 'BeeMore',
   webDir: 'www',
   server: {
