@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>gt.asms.beemoree</string>
+	<string>com.farasi.beemore</string>
 	<key>PROJECT_ID</key>
 	<string>bee-more</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:160075122538:ios:5f16001a4b5a8b2607c713</string>
+	<string>1:160075122538:ios:4d74ce35c1b09ff007c713</string>
 </dict>
 </plist>

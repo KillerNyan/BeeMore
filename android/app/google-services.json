@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:160075122538:android:82dc9b81d0499c5707c713",
+        "android_client_info": {
+          "package_name": "com.farasi.beemore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpfqae3e7jS2YpS2fERdbSi33TO6ItwUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:160075122538:android:caf81de75e7004c007c713",
         "android_client_info": {
           "package_name": "gt.asms.beemoree"
