@@ -52,12 +52,12 @@
           </ion-item>
           <!-- <ion-item (click)="verNotas()">
             <ion-icon name="ribbon-outline" slot="start" color="primary"></ion-icon>
-            <ion-label color="primary">Notas</ion-label>
+            <ion-label color="primary">Calificaciones</ion-label>
           </ion-item> -->
-          <!-- <ion-item (click)="verReportes()">
+          <ion-item (click)="verReportes()">
             <ion-icon name="newspaper-outline" slot="start" color="primary"></ion-icon>
             <ion-label color="primary">Reportes</ion-label>
-          </ion-item> -->
+          </ion-item>
           <ion-item (click)="verSoporte()">
             <ion-icon name="settings-outline" slot="start" color="primary"></ion-icon>
             <ion-label color="primary">Soporte Técnico</ion-label>
@@ -140,8 +140,7 @@
   </div>
 
   <ng-container *ngIf="mostrarHome">
-    <div class="ion-padding">
-      <br><br><br>
+    <div>
       <br><br><br>
       <ion-img src="{{ logo }}" class="ion-padding"></ion-img>
 

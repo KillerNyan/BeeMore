@@ -32,7 +32,6 @@ export class MateriasPage implements OnInit {
       if(Object.prototype.toString.call(materias) === '[object Array]'){
         this.materias = materias;
       }
-      console.log(materias);
     })
   }
 

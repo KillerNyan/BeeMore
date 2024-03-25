@@ -30,8 +30,7 @@ export class PagosHijosPage implements OnInit {
       if(Object.prototype.toString.call(hijos) === '[object Array]'){
         this.hijos = hijos;
       }
-      console.log(hijos);
-    });
+    })
   }
 
   async verPagos(pos: any) {

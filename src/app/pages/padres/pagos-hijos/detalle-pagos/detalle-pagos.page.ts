@@ -27,13 +27,11 @@ export class DetallePagosPage implements OnInit {
     (await this.asmsSrvc.getPagosProgramados(this.codigoHijo)).subscribe((pagosProgs: any) => {
       if (Object.prototype.toString.call(pagosProgs) === '[object Array]') {
         this.pagosProgs = pagosProgs;
-        console.log(pagosProgs);
       }
     });
     (await this.asmsSrvc.getPagosRealizados(this.codigoHijo)).subscribe((pagosRlzds: any) => {
       if (Object.prototype.toString.call(pagosRlzds) === '[object Array]') {
         this.pagosRlzds = pagosRlzds;
-        console.log(pagosRlzds);
       }
     });
     (await this.asmsSrvc.getPagosSaldos(this.codigoHijo)).subscribe((pagosSaldos: any) => {
