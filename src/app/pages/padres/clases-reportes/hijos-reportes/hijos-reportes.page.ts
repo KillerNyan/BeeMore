@@ -51,10 +51,21 @@ export class HijosReportesPage implements OnInit {
       }
     });
     await pagina.present();
+
+    const { data, role } = await pagina.onWillDismiss();
+    //console.log(role);
+    if (role === 'confirm') {
+      (await this.asmsSrvc.getHijosReportes(this.usuario, this.codigo, this.usuCodigo)).subscribe((resp: any) => {
+        if (Object.prototype.toString.call(resp) === '[object Array]') {
+          this.hijos = resp;
+          //console.log(resp);
+        }
+      });
+    }
   }
 
   cerrar() {
-    this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss( null, 'confirm');
   }
 
 }

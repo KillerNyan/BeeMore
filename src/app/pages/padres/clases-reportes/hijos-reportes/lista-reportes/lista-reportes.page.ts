@@ -86,7 +86,7 @@ export class ListaReportesPage implements OnInit {
   }
 
   cerrar() {
-    this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss( null, 'confirm' );
   }
 
 }
